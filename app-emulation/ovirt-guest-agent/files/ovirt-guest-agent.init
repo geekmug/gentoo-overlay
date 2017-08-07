@@ -1,0 +1,23 @@
+#!/sbin/openrc-run
+
+start() {
+    ebegin "Starting oVirt Guest Agent"
+
+    export EPYTHON="python2.7"
+    start-stop-daemon --start \
+	--background \
+	--pidfile /run/ovirt-guest-agent.pid \
+        --exec /usr/share/ovirt-guest-agent/ovirt-guest-agent.py
+
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping oVirt Guest Agent"
+
+    start-stop-daemon --stop \
+	--pidfile /run/ovirt-guest-agent.pid
+
+    eend $?
+}
+
