@@ -1,0 +1,11 @@
+<repositories version="1.0">
+	<repo quality="experimental" status="unofficial">
+		<name>geekmug</name>
+		<description lang="en">Scott Dial's Gentoo overlay</description>
+		<homepage>https://github.com/geekmug/gentoo-overlay</homepage>
+		<owner type="person">
+			<name>Scott Dial</name>
+		</owner>
+		<source type="git">git://github.com/geekmug/gentoo-overlay.git</source>
+	</repo>
+</repositories>
