@@ -1,0 +1,11 @@
+[Unit]
+Description=oVirt Guest Agent
+Wants=qemu-guest-agent.service
+After=qemu-guest-agent.service
+
+[Service]
+ExecStart=/usr/share/ovirt-guest-agent/ovirt-guest-agent.py
+PIDFile=/run/ovirt-guest-agent.pid
+
+[Install]
+WantedBy=multi-user.target
